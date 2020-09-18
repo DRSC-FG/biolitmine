@@ -4,8 +4,12 @@ Public Repo of Biolitmine Source Code
 MIT Licenenced code
 
 The code considers XML downloaded at the end of the year to be "baseline"
-and the updated daily updates provided by NCBI to be "updates". 
+and the updated daily updates provided by NCBI to be "updates".
+Files to be extracted available here:
+ftp://ftp.ncbi.nlm.nih.gov/pubmed/{type}/pubmed*.xml.gz 
 Input data is the "data_input" folder and processed data in the "data_extracted" folder
+
+
 
 There are two configuration file where the default directoried can be inspected and changed:  rscript/config_baseline.R and 
 rscript/config_update.R.
