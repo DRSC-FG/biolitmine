@@ -3,6 +3,7 @@
 This folder contains 8 Perl scripts that are responsible for extracting information from `gene2pubmed` and the publication XMLs into tabular-formatted files. These output files are used to update/populate the `biolitmine` database.
 
 Script | Description
+------ | -----------
 `create_mesh_files.pl` | Outputs two files: `mesh_info.txt` which contains information about each MeSH term; and `mesh_lookup.txt` which maps each parent MeSH term to their children
 `create_pi_files.pl` | Outputs two files: `pi2pubmed.txt` which lists all the authors of each publication; and `pi_info.txt` which contains information about each PI (including their number of total publications)
 `filter_gene2pubmed.pl` | Filters through publications, keeping only those with a focus or is related to the study of model organisms and humans
