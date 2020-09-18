@@ -1,9 +1,11 @@
-## `download_pubmed_` Folder
+## `download_pubmed` Folder
 
 This folder contains two Perl scripts that are responsible for downloading files from the NCBI ftp site.
 
-* `get_new_gene2pubmed.pl` - Downloads a zipped file that contains the mapping relationship between publications and genes
-* `get_pubmed_xml.pl` - Downloads all the zipped XML files (either from `baseline` or `updatefiles`) in PubMed. If any new zipped files are found, the files will be extracted
+Script | Description
+------ | -----------
+`get_new_gene2pubmed.pl` | Downloads a zipped file that contains the mapping relationship between publications and genes
+`get_pubmed_xml.pl` | Downloads all the zipped XML files (either from `baseline` or `updatefiles`) in PubMed. If any new zipped files are found, the files will be extracted
 
 
 ### Example Usage
