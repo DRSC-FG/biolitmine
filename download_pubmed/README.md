@@ -9,6 +9,7 @@ This folder contains two Perl scripts that are responsible for downloading files
 ### Example Usage
 
 **Download the latest gene2pubmed file**
+
 This script requires one parameter to be passed: `dir`. `dir` will tell the script where the file will be downloaded. 
 
 For example, the following command will download `gene2pubmed.gz` to a directory called `downloads`:
@@ -18,6 +19,7 @@ perl get_new_gene2pubmed.pl -dir downloads
 ```
 
 **Download the latest PubMed XML files**
+
 This script require two parameters: `dir` and `type`. `dir` will tell the script where the files will be downloaded and extracted, `type` will dictate which XML will be downloaded. 
 
 For example, the following command will download all `/pubmed*.xml.gz` files from `updatefiles` into the `downloads/updatefiles` directory:
