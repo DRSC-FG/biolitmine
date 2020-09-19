@@ -1,4 +1,4 @@
-## `extract_pubmed` Folder
+## `extract` Folder
 
 This folder contains 8 Perl scripts that are responsible for extracting information from `gene2pubmed` and the publication XMLs into tabular-formatted files. These output files are used to update/populate the `biolitmine` database.
 
@@ -15,3 +15,9 @@ Script | Description
 
 **Note:**
 `precompute_mesh2gene.pl` has one optional parameter: `-child`. If passed, then the script will map a gene to a MeSH term along with all its child MeSH terms.
+
+This folder also contains a shell script that will preprocess the Rscript output files into files that will be used by the Perl scripts listed above.
+
+Script | Description
+------ | -----------
+`merge_script.sh` | Outputs four files for input data to the Perl scripts: `authors2pubmed.txt`, `brief_info.txt`, `mesh2pubmed.txt`, `detail2pubmed.txt`
