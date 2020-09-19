@@ -34,7 +34,9 @@ R-Scripts in the rscripts directory
  which runs a batch job
  
  run_xml_extractions_1_no_slurm.sh <type> <config file>  <process #> <total processes>
+        
  eg:
+ 
  run_xml_extractions_1_no_slurm.sh detail rscripts/config_update.R 1 1
  run_xml_extractions_1_no_slurm.sh mesh rscripts/config_update.R 1 1
  run_xml_extractions_1_no_slurm.sh brief rscripts/config_update.R 1 1
