@@ -1,37 +1,39 @@
 # biolitmine
-Public Repo of Biolitmine Source Code
+**Public Repository for BioLitMine Source Code**
 
-MIT Licenenced code
+[BioLitMine](https://www.flyrnai.org/tools/biolitmine) is a tool that leverages PubMed literature to find relationships between genes, MeSH terms, pathways, and authors. This repository contains code used to download and extract information from various sources to find these relationships.
 
-This is code used to generate the data used in the literture mining tool BioLitmine
-https://www.flyrnai.org/tools/biolitmine
+## Download Data
 
-## Downloading data
+To start, all literature on PubMed will be downloaded via the NLM ftp site as zipped XML files. NLM provides two types of PubMed data:
 
-The code considers XML downloaded at the end of the year to be "baseline"
-and the updated daily updates provided by NCBI to be "updates".
+Type | Data | BioLitMine Download Schedule
+---- | ---- | ----------------------------
+`baseline` | baseline set of MEDLINE/PubMed citation records | End of the year
+`updatefiles` | daily file updates that include new, revised, and deleted citations | End of the month
 
-Input data is the "data_input" folder and processed data in the "data_extracted" folder
+MeSH Descriptor information and MeSH tree numbers are also downloaded on an annual basis.
 
-code for downloading in /download_pubmed folder
-
-## Extracing XML
-
-The pubmed XML files are extracted into table form using R code found in the /rscipts directory.
-
-There are two configuration file where the default directoried can be inspected and changed:  rscript/config_baseline.R and 
-rscript/config_update.R.
-
-The extraction deals creates 4 output types;
-1. details
-2. mesh
-3. brief
-4. author
+All data are downloaded into a directory called `data_input`, and the code to download is located in `download`.
 
 
- ## Further Data Preperation
+## Extract XML Information
+
+XML files are then extracted into tabular format using the R scripts in `rscipts`.
+
+There are two configuration files where the default directories can be inspected and changed: `rscript/config_baseline.R` and `rscript/config_update.R`.
+
+The extraction creates 4 output files that contain different information:
+
+Output Files | Information
+------------ | -----------
+`brief_*.txt` | Literature overview, including PMID, journal title, publication/MEDLINE date, and publication type
+`detail_*.txt` | Literature details, including PMID, journal title, publication/MEDLINE date, and abstract
+`mesh_*.txt` | Literature MeSH details, including PMID and MeSH Descriptor name
+`tempauthor_*.txt` | Author details, including first name, last name, affiliations, address, email, and associated PMIDs
+
+
+## Further Data Preparation
  
- The extracted xml files require further processing into tabular form.  Code to do so is found in the extract_pubmed folder.
+Finally, the extracted information is further processed by scripts found in `extract`.  Steps taken include filtering out publications not related to the study of model organisms and humans, merging files together, etc.
  
- 
-
